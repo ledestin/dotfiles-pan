@@ -25,7 +25,6 @@ signingkey = ~/.ssh/id_ed25519.pub
 [rebase]
 	autosquash = true
 [init]
-	templatedir = ~/.git_template
 	defaultBranch = main
 [gpg]
 	format = ssh
