@@ -1,4 +1,12 @@
 call plug#begin('~/.vim/plugged')
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-rails'
+  Plug 'https://github.com/tpope/vim-fugitive.git'
+  Plug 'https://github.com/tpope/vim-commentary.git'
+  Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-abolish'
+  Plug 'tpope/vim-rake'
+
   Plug 'dense-analysis/ale'
   Plug 'jlanzarotta/bufexplorer'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -8,21 +16,16 @@ call plug#begin('~/.vim/plugged')
   Plug 'tmhedberg/matchit'
   Plug 'joker1007/vim-ruby-heredoc-syntax'
   Plug 'thoughtbot/vim-rspec'
-  Plug 'tpope/vim-rails'
   Plug 'wakatime/vim-wakatime'
   Plug 'moll/vim-bbye'
   Plug 'ntpeters/vim-better-whitespace'
-  Plug 'tpope/vim-surround'
   Plug 'christoomey/vim-rfactory'
   Plug 'https://github.com/AndrewRadev/splitjoin.vim.git'
-  Plug 'https://github.com/tpope/vim-fugitive.git'
-  Plug 'https://github.com/tpope/vim-commentary.git'
   Plug 'https://github.com/inkarkat/vim-ReplaceWithRegister'
   Plug 'christoomey/vim-titlecase'
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'https://github.com/adelarsq/vim-matchit'
   Plug 'nelstrom/vim-textobj-rubyblock'
-  Plug 'tpope/vim-repeat'
   Plug 'Galooshi/vim-import-js'
   Plug 'christoomey/vim-conflicted'
   Plug 'davidpdrsn/vim-notable'
@@ -40,10 +43,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'jreybert/vimagit'
   Plug 'https://gitlab.com/calebw/vci-check.git'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarnpkg install'  }
-  Plug 'tpope/vim-abolish'
   Plug 'christoomey/vim-system-copy'
   Plug 'Trevoke/ultisnips-rspec'
-  Plug 'tpope/vim-rake'
 
   " Snippets
   Plug 'SirVer/ultisnips'
