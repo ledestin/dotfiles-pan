@@ -1,0 +1,7 @@
+node_modules/
+.AppleDouble
+.DS_Store
+*.gem
+*.o
+*.so
+*.swp
