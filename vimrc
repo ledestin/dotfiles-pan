@@ -20,11 +20,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'luochen1990/rainbow'
   Plug 'jreybert/vimagit'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarnpkg install'  }
-  Plug 'Trevoke/ultisnips-rspec'
   " Snippets
   Plug 'SirVer/ultisnips'
   " Snippets are separated from the engine. Add this if you want them:
   Plug 'honza/vim-snippets'
+  " 4 stars on Github, can't trust much.
+  "Plug 'Trevoke/ultisnips-rspec'
 
   Plug 'kana/vim-textobj-user'
   Plug 'kana/vim-textobj-function'
