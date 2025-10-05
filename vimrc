@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'dense-analysis/ale'
   Plug 'jlanzarotta/bufexplorer'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
   Plug 'mileszs/ack.vim'
   Plug 'airblade/vim-gitgutter'
   Plug 'sheerun/vim-polyglot'
