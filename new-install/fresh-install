@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+show_snaps_in_xfce_launcher() {
+  local local_snap_dir="$HOME/.local/share/applications/"
+  local local_link_to_snaps="$local_snap_dir/snap"
+
+  if [[ -e "$local_link_to_snaps" ]]; then
+    return
+  fi
+
+  mkdir -p "$local_snap_dir"
+  ln -s /var/lib/snapd/desktop/applications "$local_snap_dir/snap"
+}
+
+sudo apt-get install vim-nox keepassxc snapd git unattended-upgrades postfix \
+  mutt tcpdump eza keychain
+sudo snap install obsidian --classic
+show_snaps_in_xfce_launcher
