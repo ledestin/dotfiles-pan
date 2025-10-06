@@ -9,6 +9,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rake'
   Plug 'thoughtbot/vim-rspec'
   Plug 'wakatime/vim-wakatime'
+  Plug 'christoomey/vim-rfactory'
+  Plug 'christoomey/vim-titlecase'
+  Plug 'christoomey/vim-conflicted'
+  Plug 'christoomey/vim-system-copy'
+  Plug 'christoomey/vim-quicklink'
 
   " Useful functionality
   Plug 'dense-analysis/ale'
@@ -32,11 +37,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'kana/vim-textobj-function'
   Plug 'kana/vim-textobj-syntax'
   Plug 'kana/vim-textobj-line'
-  Plug 'christoomey/vim-rfactory'
-  Plug 'christoomey/vim-titlecase'
-  Plug 'christoomey/vim-conflicted'
-  Plug 'christoomey/vim-system-copy'
-  Plug 'christoomey/vim-quicklink'
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'nelstrom/vim-textobj-rubyblock'
   Plug 'julian/vim-textobj-variable-segment'
