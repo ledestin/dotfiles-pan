@@ -51,7 +51,7 @@ call plug#begin('~/.vim/plugged')
   " Don't need functionality that much, so choose safety.
   "Plug 'https://github.com/AndrewRadev/splitjoin.vim.git'
   "Plug 'https://github.com/inkarkat/vim-ReplaceWithRegister'
-  Plug 'Galooshi/vim-import-js'
+  "Plug 'Galooshi/vim-import-js'
   Plug 'davidpdrsn/vim-notable'
   Plug 'rhysd/vim-grammarous'
   Plug 'svermeulen/vim-yoink'
