@@ -59,8 +59,9 @@ call plug#begin('~/.vim/plugged')
   " Seems to be a duplicate of adelarsq's matchit.
   "Plug 'tmhedberg/matchit'
 
-  Plug 'https://gitlab.com/calebw/vci-check.git'
-  Plug 'mattn/webapi-vim'
+  " Misc plugins with not so important functionality.
+  "Plug 'https://gitlab.com/calebw/vci-check.git'
+  "Plug 'mattn/webapi-vim'
 call plug#end()
 
 set textwidth=80
