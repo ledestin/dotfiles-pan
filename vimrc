@@ -48,7 +48,8 @@ call plug#begin('~/.vim/plugged')
   "Plug 'fvictorio/vim-textobj-backticks'
   "Plug 'joker1007/vim-ruby-heredoc-syntax'
 
-  Plug 'https://github.com/AndrewRadev/splitjoin.vim.git'
+  " Don't need functionality that much, so choose safety.
+  "Plug 'https://github.com/AndrewRadev/splitjoin.vim.git'
   Plug 'https://github.com/inkarkat/vim-ReplaceWithRegister'
   Plug 'Galooshi/vim-import-js'
   Plug 'davidpdrsn/vim-notable'
