@@ -52,7 +52,8 @@ call plug#begin('~/.vim/plugged')
   "Plug 'https://github.com/AndrewRadev/splitjoin.vim.git'
   "Plug 'https://github.com/inkarkat/vim-ReplaceWithRegister'
   "Plug 'Galooshi/vim-import-js'
-  Plug 'rhysd/vim-grammarous'
+  " I need spell checking, but I'm not sure it's this plugin providing it.
+  "Plug 'rhysd/vim-grammarous'
   Plug 'svermeulen/vim-yoink'
   Plug 'liuchengxu/vim-which-key'
   " Seems to be a duplicate of adelarsq's matchit.
