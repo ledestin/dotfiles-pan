@@ -52,7 +52,6 @@ call plug#begin('~/.vim/plugged')
   "Plug 'https://github.com/AndrewRadev/splitjoin.vim.git'
   "Plug 'https://github.com/inkarkat/vim-ReplaceWithRegister'
   "Plug 'Galooshi/vim-import-js'
-  Plug 'davidpdrsn/vim-notable'
   Plug 'rhysd/vim-grammarous'
   Plug 'svermeulen/vim-yoink'
   Plug 'liuchengxu/vim-which-key'
