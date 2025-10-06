@@ -30,6 +30,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'SirVer/ultisnips'
   " Snippets are separated from the engine. Add this if you want them:
   Plug 'honza/vim-snippets'
+  Plug 'mileszs/ack.vim'
+  Plug 'https://github.com/adelarsq/vim-matchit'
   " 4 stars on Github, can't trust much.
   "Plug 'Trevoke/ultisnips-rspec'
 
@@ -45,8 +47,6 @@ call plug#begin('~/.vim/plugged')
   "Plug 'fvictorio/vim-textobj-backticks'
   "Plug 'joker1007/vim-ruby-heredoc-syntax'
 
-  Plug 'mileszs/ack.vim'
-  Plug 'https://github.com/adelarsq/vim-matchit'
   Plug 'moll/vim-bbye'
   Plug 'https://github.com/AndrewRadev/splitjoin.vim.git'
   Plug 'https://github.com/inkarkat/vim-ReplaceWithRegister'
