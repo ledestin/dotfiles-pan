@@ -45,7 +45,6 @@ call plug#begin('~/.vim/plugged')
   "Plug 'fvictorio/vim-textobj-backticks'
 
   Plug 'mileszs/ack.vim'
-  Plug 'tmhedberg/matchit'
   Plug 'https://github.com/adelarsq/vim-matchit'
   Plug 'joker1007/vim-ruby-heredoc-syntax'
   Plug 'moll/vim-bbye'
@@ -56,6 +55,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'rhysd/vim-grammarous'
   Plug 'svermeulen/vim-yoink'
   Plug 'liuchengxu/vim-which-key'
+  " Seems to be a duplicate of adelarsq's matchit.
+  "Plug 'tmhedberg/matchit'
 
   Plug 'https://gitlab.com/calebw/vci-check.git'
   Plug 'mattn/webapi-vim'
