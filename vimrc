@@ -43,10 +43,10 @@ call plug#begin('~/.vim/plugged')
   "Plug 'julian/vim-textobj-variable-segment'
   "Plug 'whatyouhide/vim-textobj-xmlattr'
   "Plug 'fvictorio/vim-textobj-backticks'
+  "Plug 'joker1007/vim-ruby-heredoc-syntax'
 
   Plug 'mileszs/ack.vim'
   Plug 'https://github.com/adelarsq/vim-matchit'
-  Plug 'joker1007/vim-ruby-heredoc-syntax'
   Plug 'moll/vim-bbye'
   Plug 'https://github.com/AndrewRadev/splitjoin.vim.git'
   Plug 'https://github.com/inkarkat/vim-ReplaceWithRegister'
