@@ -34,6 +34,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'https://github.com/adelarsq/vim-matchit'
   Plug 'moll/vim-bbye'
   Plug 'svermeulen/vim-yoink'
+  Plug 'liuchengxu/vim-which-key'
   " 4 stars on Github, can't trust much.
   "Plug 'Trevoke/ultisnips-rspec'
 
@@ -55,7 +56,6 @@ call plug#begin('~/.vim/plugged')
   "Plug 'Galooshi/vim-import-js'
   " I need spell checking, but I'm not sure it's this plugin providing it.
   "Plug 'rhysd/vim-grammarous'
-  Plug 'liuchengxu/vim-which-key'
   " Seems to be a duplicate of adelarsq's matchit.
   "Plug 'tmhedberg/matchit'
 
