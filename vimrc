@@ -15,6 +15,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'christoomey/vim-system-copy'
   Plug 'christoomey/vim-quicklink'
 
+  " Colorscheme
+  Plug 'flazz/vim-colorschemes'
+
   " Useful functionality
   Plug 'dense-analysis/ale'
   Plug 'jlanzarotta/bufexplorer'
