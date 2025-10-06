@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+backup() {
+  export RESTIC_PASSWORD_FILE=$HOME/.restic-password-file
+  restic -r /mnt/flash/backup "$@" backup --exclude ~ledestin/.config/yarn --exclude ~ledestin/.config/BraveSoftware  --exclude ~ledestin/.config/discord --exclude ~ledestin/.config/Slack --exclude ~ledestin/.config/chromium --exclude ~ledestin/Resources/KPOP --exclude ~ledestin/Resources/MFC --exclude ~ledestin/Resources/JPOP --exclude ~ledestin/Resources/JAV --exclude ~ledestin/Resources/"Ruby Tapas" --exclude ~ledestin/Resources/Marketing/Growthtrackers/ --exclude ~ledestin/Archive/Refactoring\ dev.to\ JavaScript\ with\ Raddevon/ "$@" ~/Documents/ "$HOME/Local Sites/" ~/Areas/ruby\ clarity/ ~/Archive/Documents/ ~/.bin/
+}
+
+flash_disk=$(ls /dev/disk/by-id/usb-USB_SanDisk_3.2G*-part1)
+
+if ! mount | grep -q /mnt/flash; then
+  sudo mount "$flash_disk" /mnt/flash/
+fi
+cp "$HOME/Documents/Pensieve/Perform a restore from backup drill on new laptop.md" /mnt/flash
+
+backup "$@"
+sudo umount /mnt/flash/
+echo "You can remove the flash drive now"
