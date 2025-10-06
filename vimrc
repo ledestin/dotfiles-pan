@@ -33,6 +33,7 @@ call plug#begin('~/.vim/plugged')
   " 4 stars on Github, can't trust much.
   "Plug 'Trevoke/ultisnips-rspec'
 
+  " Text object plugins
   Plug 'kana/vim-textobj-user'
   Plug 'kana/vim-textobj-function'
   Plug 'kana/vim-textobj-syntax'
@@ -42,6 +43,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'julian/vim-textobj-variable-segment'
   Plug 'whatyouhide/vim-textobj-xmlattr'
   Plug 'fvictorio/vim-textobj-backticks'
+
   Plug 'mileszs/ack.vim'
   Plug 'tmhedberg/matchit'
   Plug 'https://github.com/adelarsq/vim-matchit'
