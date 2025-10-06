@@ -32,6 +32,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'honza/vim-snippets'
   Plug 'mileszs/ack.vim'
   Plug 'https://github.com/adelarsq/vim-matchit'
+  Plug 'moll/vim-bbye'
   " 4 stars on Github, can't trust much.
   "Plug 'Trevoke/ultisnips-rspec'
 
@@ -47,7 +48,6 @@ call plug#begin('~/.vim/plugged')
   "Plug 'fvictorio/vim-textobj-backticks'
   "Plug 'joker1007/vim-ruby-heredoc-syntax'
 
-  Plug 'moll/vim-bbye'
   Plug 'https://github.com/AndrewRadev/splitjoin.vim.git'
   Plug 'https://github.com/inkarkat/vim-ReplaceWithRegister'
   Plug 'Galooshi/vim-import-js'
