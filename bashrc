@@ -256,7 +256,7 @@ fi
   # Serve HTTP
   alias serve-current-dir-http="ruby -run -e httpd . -p 9090"
 
-  # . "$HOME/.bash_docker"
+  . "$HOME/.bash_docker"
 
   # Currency exchange
   alias conv=lumione
