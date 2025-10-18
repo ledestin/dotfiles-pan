@@ -15,6 +15,7 @@ show_snaps_in_xfce_launcher() {
 }
 
 sudo apt-get install vim-nox keepassxc snapd git unattended-upgrades postfix \
-  mutt tcpdump eza keychain silversearcher-ag ncurses-term hexchat rsync
+  mutt tcpdump eza keychain silversearcher-ag ncurses-term hexchat rsync \
+  fd-find
 sudo snap install obsidian --classic
 show_snaps_in_xfce_launcher
