@@ -2,6 +2,34 @@
 
 set -e
 
+write_alpine_user_data() {
+cat >user-data <<-EOF
+#cloud-config
+users:
+  - name: alpine
+    ssh_authorized_keys:
+      - $PUB_KEY
+EOF
+}
+
+write_generic_user_data() {
+cat >user-data <<-EOF
+#cloud-config
+packages:
+  - sudo
+users:
+  - name: ledestin
+    ssh-authorized-keys:
+      - $PUB_KEY
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    groups: sudo
+    shell: $shell
+runcmd:
+  - echo "AllowUsers ledestin" >> /etc/ssh/sshd_config
+  - restart ssh
+EOF
+}
+
 instance_name="$1"
 instance_dir="$HOME/images/$instance_name"
 iso_image="$instance_dir/$instance_name-cidata.iso"
@@ -17,26 +45,13 @@ instance-id: id-$instance_name
 local-hostname: $instance_name
 EOF
 
-PUB_KEY=$(cat ~/.ssh/id_ed25519.pub)
+  PUB_KEY=$(cat ~/.ssh/id_ed25519.pub)
+  if is_alpine; then
+    write_alpine_user_data
+    return
+  fi
 
-cat >user-data <<-EOF
-#cloud-config
-packages:
-  - sudo
-users:
-  - name: ledestin
-    ssh-authorized-keys:
-      - $PUB_KEY
-    sudo: ['ALL=(ALL) NOPASSWD:ALL']
-    groups: sudo
-    shell: $shell
-  - alpine
-    ssh-authorized-keys:
-      - $PUB_KEY
-runcmd:
-  - echo "AllowUsers ledestin" >> /etc/ssh/sshd_config
-  - restart ssh
-EOF
+  write_generic_user_data
 }
 
 create_iso() {
