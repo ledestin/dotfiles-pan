@@ -30,10 +30,9 @@ users:
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     groups: sudo
     shell: $shell
-chpasswd:
-  list: |
-    ledestin:alpine
-  expire: false
+  - alpine
+    ssh-authorized-keys:
+      - $PUB_KEY
 runcmd:
   - echo "AllowUsers ledestin" >> /etc/ssh/sshd_config
   - restart ssh
