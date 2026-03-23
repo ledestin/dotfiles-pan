@@ -13,6 +13,7 @@ fi
 
 create_init_files() {
 cat >meta-data <<-EOF
+instance-id: id-$instance_name
 local-hostname: $instance_name
 EOF
 
