@@ -7,7 +7,7 @@ backup() {
   restic -r /mnt/flash/backup "$@" backup --exclude ~ledestin/.config/yarn --exclude ~ledestin/.config/BraveSoftware  --exclude ~ledestin/.config/discord --exclude ~ledestin/.config/Slack --exclude ~ledestin/.config/chromium --exclude ~ledestin/Resources/KPOP --exclude ~ledestin/Resources/MFC --exclude ~ledestin/Resources/JPOP --exclude ~ledestin/Resources/JAV --exclude ~ledestin/Resources/"Ruby Tapas" --exclude ~ledestin/Resources/Marketing/Growthtrackers/ --exclude ~ledestin/Archive/Refactoring\ dev.to\ JavaScript\ with\ Raddevon/ "$@" ~/Documents/ "$HOME/Local Sites/" ~/Areas/ruby\ clarity/ ~/Archive/Documents/ ~/.bin/ ~/.dotfiles
 }
 
-flash_disk=$(ls /dev/disk/by-id/usb-USB_SanDisk_3.2G*-part1)
+flash_disk=$(ls /dev/disk/by-id/usb-Kingston_DataTraveler_3.0_408D5CE4B641E950293F2387-0\:0-part1)
 
 if ! mount | grep -q /mnt/flash; then
   sudo mount "$flash_disk" /mnt/flash/
