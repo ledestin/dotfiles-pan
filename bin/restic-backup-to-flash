@@ -15,7 +15,7 @@ fi
 cp "$HOME/Documents/Pensieve/Perform a restore from backup drill on new laptop.md" /mnt/flash
 cp "$HOME/Documents/Passwords.kdbx" /mnt/flash
 cp "$HOME/.restic-env" /mnt/flash
-cp "$HOME/.restic-password-file" /mnt/flash
+cp -a "$HOME/system-backup" /mnt/flash
 
 backup "$@"
 sudo umount /mnt/flash/
