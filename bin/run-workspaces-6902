@@ -3,6 +3,7 @@ set -e
 . "$HOME/.run-workspaces"
 
 ssl_cert_group=$(getent group ssl-cert | cut -d: -f3)
+card0_group=$(stat -c '%g %n' /dev/dri/card0 | awk '{ print $1 }')
 render_group=$(stat -c '%g %n' /dev/dri/renderD128 | awk '{ print $1 }')
 
-docker run --rm -it -p 6902:6901 -e VNC_PW -e KASM_EGL_CARD=/dev/dri/card0 -e KASM_RENDERD=/dev/dri/renderD128 --device /dev/dri/card0:/dev/dri/card0:rwm --device=/dev/dri/renderD128:/dev/dri/renderD128:rwm --group-add "$ssl_cert_group" --group-add "$render_group" "$1"
+docker run --rm -it -p 6902:6901 -e VNC_PW -e KASM_EGL_CARD=/dev/dri/card0 -e KASM_RENDERD=/dev/dri/renderD128 --device /dev/dri/card0:/dev/dri/card0:rwm --device=/dev/dri/renderD128:/dev/dri/renderD128:rwm --group-add "$ssl_cert_group" --group-add "$card0_group" --group-add "$render_group" "$1"
