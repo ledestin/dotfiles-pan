@@ -6,8 +6,8 @@ card_device="/dev/dri/card0"
 render_device="/dev/dri/renderD128"
 
 ssl_cert_group=$(getent group ssl-cert | cut -d: -f3)
-card_group=$(stat -c '%g %n' "$card_device" | awk '{ print $1 }')
-render_group=$(stat -c '%g %n' "$render_device"  | awk '{ print $1 }')
+card_group=$(stat -c '%g' "$card_device")
+render_group=$(stat -c '%g' "$render_device")
 
 docker run --rm -it \
     -p 6902:6901 \
