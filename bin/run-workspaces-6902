@@ -2,8 +2,21 @@
 set -e
 . "$HOME/.run-workspaces"
 
-ssl_cert_group=$(getent group ssl-cert | cut -d: -f3)
-card0_group=$(stat -c '%g %n' /dev/dri/card0 | awk '{ print $1 }')
-render_group=$(stat -c '%g %n' /dev/dri/renderD128 | awk '{ print $1 }')
+card_device="/dev/dri/card0"
+render_device="/dev/dri/renderD128"
 
-docker run --rm -it -p 6902:6901 -e VNC_PW -e KASM_EGL_CARD=/dev/dri/card0 -e KASM_RENDERD=/dev/dri/renderD128 --device /dev/dri/card0:/dev/dri/card0:rwm --device=/dev/dri/renderD128:/dev/dri/renderD128:rwm --group-add "$ssl_cert_group" --group-add "$card0_group" --group-add "$render_group" "$1"
+ssl_cert_group=$(getent group ssl-cert | cut -d: -f3)
+card_group=$(stat -c '%g %n' "$card_device" | awk '{ print $1 }')
+render_group=$(stat -c '%g %n' "$render_device"  | awk '{ print $1 }')
+
+docker run --rm -it \
+    -p 6902:6901 \
+    -e VNC_PW \
+    -e KASM_EGL_CARD="$card_device" \
+    -e KASM_RENDERD="$render_device" \
+    --device "$card_device:$card_device:rwm" \
+    --device "$render_device:$render_device:rwm" \
+    --group-add "$ssl_cert_group" \
+    --group-add "$card_group" \
+    --group-add "$render_group" \
+    "$1"
