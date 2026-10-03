@@ -5,6 +5,7 @@ export BUILDKIT_PROGRESS=plain
 # Docker aliases and functions
 
 alias dc="docker container"
+alias dcip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
 alias dcl="dc ls"
 alias dcs="dc start"
 alias di="docker image"
